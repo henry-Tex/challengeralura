@@ -1,4 +1,14 @@
-function encripta (texto){
+function exibirTexto (tag, texto){
+    let imagem = document.querySelector(".areacentra__direita__imagem");
+    let paragrafo = document.querySelector(".areacentral__direita__paragrafo");
+    let conteudo = document.querySelector(`${tag}`);
+    imagem.remove()
+    paragrafo.remove()
+    conteudo.innerHTML = texto;
+};
+
+function encripta (){
+    let texto = document.querySelector('textarea').value
     let arrayCripto = Array.from(texto, function(str){
         if (str == 'a') {return str = 'ai'}
         if (str == 'e') {return str = 'enter'}
@@ -7,14 +17,16 @@ function encripta (texto){
         if (str == 'u') {return str = 'ufat'}
         else {return str}
     })
-    return arrayCripto.toString().replaceAll(',','')
+    let textoSaida = arrayCripto.toString().replaceAll(',','')
+    exibirTexto ('.areacentral__direita__h2',textoSaida);
 }
-console.log (encripta('Fala comigo'));
-function desencripta (texto){
+function desencripta (){
+    let texto = document.querySelector('textarea').value
+    console.log (texto)
     let arrayTexto = texto.split(' ');
     let arrayCripto = arrayTexto.map(function(str){
         return str.replaceAll('ai','a').replaceAll('enter','e').replaceAll('imes','i').replaceAll('ober','o').replaceAll('ufat','u');
     })
-    return arrayCripto.toString().replaceAll(',',' ')
+    let textoSaida = arrayCripto.toString().replaceAll(',',' ')
+    exibirTexto ('.areacentral__direita__h2',textoSaida);
 }
-console.log (desencripta("pairaibenterns poberr enterncairair enterssenter dentersaifimesober enter tenterr fimesnailimeszaidober enterlenter coberm sufatcenterssober!"));
