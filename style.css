@@ -1,0 +1,121 @@
+*{ /* para resetar a formatação padrão */
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+}
+body {
+    /* height: 100vh; Boa prática para utilizar 100% da viewport */
+    box-sizing: border-box; /* Boa prática para box filhos não sairem da tela e se adaptarem a ela */
+}
+.cabecalho{
+    background-color: rgb(113, 182, 190);
+}
+.logo{
+    padding: 1%;
+}
+p {
+    color:#495057;
+}
+h2{
+    color:#343A40;
+}
+.areacentral__areadetexto::-webkit-input-placeholder { /* utilizando classe e propriedade específica*/
+    color:#0A3871;
+    font-size: 1.75rem;
+    font-weight:400;
+    font-family: Inter, regular;
+}
+.areacentral{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    height: 720px;
+    margin-top: 1%;
+}
+.areacentral__esquerda{
+    display: flex;
+    margin-left:5%;
+    flex-direction: column;
+    width: 40%;
+}
+.areacentral__areadetexto{
+    width: 110%;
+    font-size: 1.875rem;
+}
+
+.areacentral__esquerda__aviso{
+    display: flex;
+    margin-top: 20%;
+    font-size: 1.2rem;
+    gap: 1%;
+}
+.areacentral__interrogacao{
+    height: 18px;
+}
+
+.areacentral__esquerda__botoes{
+    display: flex;
+    padding-top: 2%;
+    height: 67px;
+    width: 110%;
+    justify-content: space-between;
+}
+.areacentral__esquerda__botoescripto{
+    text-align: center;
+    width: 45%;
+    font-size: 1.5rem;
+    font-family: Inter, regular;
+    color: white;
+    border-radius: 30px;
+    background-color: blue;
+}
+.areacentral__esquerda__botoescripto:hover{
+    background-color: grey;
+}
+.areacentral__direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:500px;
+    height: 100%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.areacentra__direita__imagem{
+    display: flex;
+    margin-top: 20%;
+    width: 90%;
+}
+.areacentral__direita__paragrafo{
+    gap: 10px;
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Inter, regular;
+}
+.areacentral__direita__h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.areacentral__direita__paragrafo{
+    font-size: 1rem;
+    font-weight: 400;
+}
+/* .rodape{
+    margin-top: 2%;
+    font-family: Arial, regular;
+    font-weight: 800;
+    text-align: center;
+    background-color: rgb(113, 182, 190);
+    padding: 40px;
+    position: absolute;
+    bottom:0%;
+    width: 96.5%;
+}
+.rodape_texto{
+    color: aliceblue;
+} */
